@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="css/constellation_choose.css"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<!--避免IE使用兼容模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!--优先使用 IE 最新版本和 Chrome:-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!--WebApp全屏模式   隐藏地址栏。-->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!--禁止百度转码显示。-->
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<!--忽略页面中的数字识别为电话，忽略email识别：-->
+	<meta name="format-detection" content="telphone=no, email=no" />
+	<link rel="stylesheet" href="reset.css">
+	<!--设置rem-->
+	<script type="text/javascript">
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				// orientationchange 事件是在用户水平或者垂直翻转设备（即方向发生变化）时触发的事件。
+				// onresize 事件会在窗口或框架被调整大小时发生。
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					window.clientWidth = docEl.clientWidth;
+					if (!window.clientWidth) return;
+					docEl.style.fontSize = 50 * (window.clientWidth / 375) + 'px';
+					window.base = 50 * (window.clientWidth / 375);
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<div class="bg">
+		<h2>星座选择</h2>
+		<div id="constellations">
+			<div><img src="img/baiyang.png" alt="">白羊座<p>Aries</p><p>(3.21-4.19)</p></div>
+			<div><img src="img/jinniu.png" alt="">金牛座<p>Taurus</p><p>(4.20-5.20)</p></div>
+			<div><img src="img/shuangzi.png" >双子座<p>Gemini</p><p>(5.21-6.21)</p></div>
+			<div><img src="img/juxie.png" alt="">巨蟹座<p>Kingcrab</p><p>(6.22-7.22)</p></div>
+			<div><img src="img/shizi.png" alt="">狮子座<p>Leo</p><p>(7.23-8.22)</p></div>
+			<div><img src="img/chunv.png" alt="">处女座<p>Virgo</p><p>(8.23-9.22)</p></div>
+			<div><img src="img/tiancheng.png" alt="">天秤座<p>Libra</p><p>(9.23-10.23)</p></div>
+			<div><img src="img/tianxie.png" alt="">天蝎座<p>Scorpio</p><p>(10.24-11.22)</p></div>
+			<div><img src="img/sheshou.png" alt="">射手座<p>Sagittarius</p><p>11.23-12.21</p></div>
+			<div><img src="img/mojie.png" alt="">摩羯座<p>Capricomus</p><p>(12.22-1.19)</p></div>
+			<div><img src="img/shuiping.png" alt="">水瓶座<p>Aquarius</p><p>(1.20-2.18)</p></div>
+			<div><img src="img/shuangyu.png" alt="">双鱼座<p>Pisces</p><p>(2.19-3.20)</p></div>
+		</div>
+		<div id="cancel">
+			<img src="img/x.png" >
+		</div>
+	</div>
+	<script src="js/1.8.3.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("#constellations>div").click(function(){
+			// window.open("detail.html?"+target.getAttribute("data-id"));
+			window.open("index.html")
+		})
+		$("#cancel").click(function(){
+			window.history.back()
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+  background: repeating-linear-gradient(#a355f6, #8223ff 50%, #a355f6 100%);
+}
+.bg {
+  text-align: center;
+  padding-bottom: 1.34rem;
+}
+.bg h2 {
+  position: relative;
+  top: 0.9rem;
+  font-size: 0.34rem;
+  color: #fff;
+}
+.bg #constellations {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+  margin: 1.43rem 0.74rem 0 0.83rem;
+}
+.bg #constellations div {
+  width: 1.45rem;
+  font-size: 0.26rem;
+  margin: 0 0.15rem 0.25rem;
+  color: #fff;
+}
+.bg #constellations div img {
+  width: 1.21rem;
+  height: 1.2rem;
+}
+.bg #constellations div p {
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 0.09rem;
+  font-size: 0.22rem;
+}
+.bg #cancel img {
+  margin-top: 0.69rem;
+  width: 0.6rem;
+}
